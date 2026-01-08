@@ -1,12 +1,12 @@
-export PATH="${HOME}/.dotfiles/bin:$PATH"
+export PATH="${HOME}/dotfiles/bin:$PATH"
 
 export NPM_CONFIG_PREFIX="${HOME}/.npm-global"
 export PATH="${NPM_CONFIG_PREFIX}/bin:$PATH"
 
-if [ -d "${HOME}/.dotfiles/completions.d" ]; then
+if [ -d "${HOME}/dotfiles/completions.d" ]; then
     while IFS= read -r completion; do
         . "$completion"
-    done < <(find "${HOME}/.dotfiles/completions.d" -type f -name "*.bash")
+    done < <(find "${HOME}/dotfiles/completions.d" -type f -name "*.bash")
 fi
 
-export CLAUDE_CONFIG_DIR="${HOME}/.dotfiles/.claude"
+export CLAUDE_CONFIG_DIR="${HOME}/dotfiles/.claude"
