@@ -5,18 +5,18 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_BIN_DIR="${DOTFILES_DIR}/bin"
 DOTFILES_COMPLETIONS_DIR="${DOTFILES_DIR}/completions.d"
 
-if ! grep "dotfiles" "${HOME}/.bashrc"; then
-    echo "Adding dotfiles to .bashrc"
+if ! grep ".dotfiles" "${HOME}/.bashrc"; then
+    echo "Adding .dotfiles to .bashrc"
     echo "" >> "${HOME}/.bashrc"
-    echo '[ ! -f "${HOME}/dotfiles/.bashrc" ] || . "${HOME}/dotfiles/.bashrc"' >> "${HOME}/.bashrc"
+    echo '[ ! -f "${HOME}/.dotfiles/.bashrc" ] || . "${HOME}/.dotfiles/.bashrc"' >> "${HOME}/.bashrc"
 fi
 
-source "${HOME}/dotfiles/.bashrc"
+source "${HOME}/.dotfiles/.bashrc"
 
-if ! grep "dotfiles" "${HOME}/.gitconfig"; then
+if ! grep ".dotfiles" "${HOME}/.gitconfig"; then
     cat <<EOF >> "${HOME}/.gitconfig"
 [include]
-    path = ${HOME}/dotfiles/.gitconfig
+    path = ${HOME}/.dotfiles/.gitconfig
 EOF
 fi
 
