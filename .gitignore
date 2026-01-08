@@ -7,6 +7,7 @@ completions.d/
 !.claude/settings.json
 !.claude/CLAUDE.md
 !.claude/agents/
+!.claude/commands/
 .specstory
 .cursorindexingignore
 samis_dots
