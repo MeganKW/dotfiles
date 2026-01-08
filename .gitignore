@@ -7,3 +7,5 @@ completions.d/
 !.claude/settings.json
 !.claude/CLAUDE.md
 !.claude/agents/
+.specstory/*
+.cursorindexingignore

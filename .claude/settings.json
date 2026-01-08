@@ -1,7 +1,4 @@
 {
   "cleanupPeriodDays": 99999,
-  "model": "opus",
-  "enabledPlugins": {
-    "code-review-jj@sjawhar": true
-  }
+  "model": "opus"
 }
